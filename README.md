@@ -8,7 +8,9 @@
 
 - 一台有着较为充足带宽和内存的服务器
 - 安装有 nginx 和 wget 的操作系统。作为参考，电子科技大学 IPTV 使用了 debian 10 及系统内置的 nginx。
-``` sudo apt install nginx wget```
+```
+sudo apt install nginx wget
+```
 
 ## Nginx Configuration
 
@@ -32,8 +34,12 @@ IPTV 的取源部分非常简单，只需要在 nginx 配置文件中反代+缓�
 该前端需要的部分信息文件上游暂时没有直接提供，我们选择了定时从清华 IPTV 获取。/var/www/iptv/ 为前端文件所在的文件夹
 
 - json文件格式的节目单。(我们在清华基础上删除了部分缺失的内容)
-```wget https://iptv.uestc.edu.cn/channels.json -O /var/www/iptv/channels.json```
+```
+wget https://iptv.uestc.edu.cn/channels.json -O /var/www/iptv/channels.json
+```
 
 - 节目列表信息。运行命令```crontab -e```并添加以下内容
-```* */4 * * * wget https://iptv.tsinghua.edu.cn/epg/todayepg.json -O /var/www/iptv/dist/epg.json```
+```
+* */4 * * * wget https://iptv.tsinghua.edu.cn/epg/todayepg.json -O /var/www/iptv/dist/epg.json
+```
 
