@@ -1,0 +1,97 @@
+{
+	/*
+	 * basic informations
+	 */
+	// titles, required.
+	"name": "IPTV",
+
+	// required.
+	"shortName": "iptv",
+
+	// required.
+	"description": "An vue.js based iptv frontend.",
+
+	// source of streams, required.
+	"srcCredit": "北邮人",
+
+	// required.
+	"sponsor": "me",
+
+	// base url of the web app, MUST be ended with slash, required.
+	"baseUrl": "/",
+
+	/*
+	 * supporting
+	 */
+	// optional.
+	"mailbox": "iptv@uestclug.org",
+
+	// optional.
+	"wechat": null,
+
+	// optional.
+	"telegram": null,
+
+	/*
+	 * urls
+	 */
+	// where to get channel list, required.
+	"channelsUrlList": [
+		"https://iptv.uestc.edu.cn/channels.json",
+	],
+
+	// where to get the EPG information, optional.
+	"epgUrlList": [
+		"https://iptv.uestc.edu.cn/epg.json",
+	],
+
+	// where to get snapshots, required.
+	"defaultSnapshotUrlTemplate": "https://iptv.uestc.edu.cn/snapshot/{Vid}.jpg",
+
+	// where to get hls files, required.
+	"defaultHlsUrlTemplate": "https://iptv.uestc.edu.cn/hls/{Vid}.m3u8",
+
+	// where to get the information about number of viewers of each channel,
+	// optional.
+	"channelViewersUrl": "https://iptv.uestc.edu.cn/status.txt",
+
+	// where to redirect to when user authorization is required,
+	// leave it null if there is no auth at all.
+	// optional.
+	"authUrl": null,
+
+	// where to GET when logout is clicked, optional.
+	"logoutUrl": null,
+
+	// url to the legacy version, optional.
+	"legacyUrl": null,
+
+	// url used to query user information, leave it null if you feel confused.
+	// optional.
+	"userInfoUrl": null,
+
+	// url of the logo of the sponsor, required.
+	"sponsorLogoUrl": "https://iptv.uestc.edu.cn/logo.png",
+
+	/*
+	 * others
+	 */
+	// which modern browser do you recommend? required.
+	"recommendedBrowser": "Firefox",
+
+	// how often snapshots should be refreshed in seconds, optional.
+	"snapshotRefreshInterval": 600,
+
+	// how often should the information about number of viewers of
+	// each channel be refreshed in seconds, optional.
+	"channelViewersRefreshInterval": 30,
+
+	/*
+	 * colors, required.
+	 */
+	"primaryColor": "#cc4272", // teal lighten-2
+	"secondaryColor": "#d17293", // pink
+
+	// optional
+	"googleAnalytics": null,
+}
