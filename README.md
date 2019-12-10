@@ -34,6 +34,6 @@ IPTV 的取源部分非常简单，只需要在 nginx 配置文件中反代+缓�
 - json文件格式的节目单。(我们在清华基础上删除了部分缺失的内容)
 ```wget https://iptv.uestc.edu.cn/channels.json -O /var/www/iptv/channels.json```
 
-- 节目列表信息。运行命令```crontab -e```并添加以下内容，/var/www/iptv/dist/ 为你的前端所在文件夹
+- 节目列表信息。运行命令```crontab -e```并添加以下内容
 ```* */4 * * * wget https://iptv.tsinghua.edu.cn/epg/todayepg.json -O /var/www/iptv/dist/epg.json```
 
